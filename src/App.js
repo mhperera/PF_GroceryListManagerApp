@@ -1,11 +1,11 @@
 import 'materialize-css/dist/css/materialize.min.css'
-import M from 'materialize-css'
+// import M from 'materialize-css'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
+
       </header>
     </div>
   );

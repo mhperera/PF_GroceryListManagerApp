@@ -2,7 +2,7 @@ import React from 'react'
 
 const ItemListComponent = () => {
   return (
-    <div className="w-100 grey lighten-2 vh-100 ItemListComponent">ItemListComponent</div>
+    <div className="w-100 bg-light-grey vh-100 ItemListComponent">ItemListComponent</div>
   )
 }
 

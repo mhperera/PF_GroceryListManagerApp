@@ -3,14 +3,14 @@ import 'materialize-css/dist/css/materialize.min.css'
 
 import HeaderComponent from './HeaderComponent';
 import FooterComponent from './FooterComponent';
+import ContentComponent from './ContentComponent';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <HeaderComponent />
+        <ContentComponent />
         <FooterComponent />
-      </header>
     </div>
   );
 }

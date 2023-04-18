@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CreateItemFormComponent = ({selectedUnit, handleSelectedUnit}) => {
+const CreateItemFormComponent = ({selectedUnit, handleSelectedUnit, handleFormSubmit, newItem, setNewItem, newQty, setNewQty}) => {
 	return (
 		<div className="w-100 vh-100 CreateItemFormComponent">
-			<form>
+			<form onSubmit={(e)=>{e.preventDefault()}}>
 				<div className="row">
 					<div className="col-12">
 						<h5 className="heading5">Add Groccery Item</h5>
@@ -19,6 +19,8 @@ const CreateItemFormComponent = ({selectedUnit, handleSelectedUnit}) => {
 							id="itemName"
 							placeholder="Item Name"
 							required
+							value={ newItem }
+            				onChange = { (e)=>{ setNewItem(e.target.value) } }
 						/>
 					</div>
 
@@ -32,6 +34,8 @@ const CreateItemFormComponent = ({selectedUnit, handleSelectedUnit}) => {
 							id="quantity"
 							placeholder="Quantity"
 							required
+							value={ newQty }
+            				onChange = { (e)=>{ setNewQty(e.target.value) } }
 						/>
 					</div>
 
@@ -55,7 +59,7 @@ const CreateItemFormComponent = ({selectedUnit, handleSelectedUnit}) => {
 					</div>
 
 					<div className="col-6 mb-3">
-						<button type="submit" className="btn btn-success">
+						<button type="submit" className="btn btn-success" onClick={()=>{handleFormSubmit()}}>
 							Add to List
 						</button>
 					</div>

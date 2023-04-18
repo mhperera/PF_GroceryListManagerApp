@@ -44,6 +44,8 @@ function App() {
   const [grocceryList, setGrocceryList] = useState(sampleList);
   const [searchText, setSearchText] = useState('');
   const [selectedUnit, setSelectedUnit] = useState('Nos');
+  const [newItem, setNewItem] = useState('');
+  const [newQty, setNewQty] = useState(1);
 
   const handleSearch = (keyWord) => {
     setSearchText(keyWord);
@@ -51,6 +53,25 @@ function App() {
 
   const handleSelectedUnit = (selectedUnit) => {
     setSelectedUnit(selectedUnit);
+  }
+
+  const handleFormSubmit = () => {
+    console.log(newItem,newQty,selectedUnit);
+    addItemFunction(newItem,newQty,selectedUnit);
+    setNewItem('');
+    setNewQty(1);
+    setSelectedUnit('Nos');
+  }
+
+  const addItemFunction = (newItem,newQty,selectedUnit) => {
+    const newGrocceryItem = {
+      id : grocceryList.length+1,
+      itemName : newItem,
+      qty: newQty,
+      unit: selectedUnit
+    }
+    const newGrocceryList = [...grocceryList, newGrocceryItem];
+    setGrocceryList(newGrocceryList);
   }
 
   return (
@@ -64,6 +85,11 @@ function App() {
           handleSearch = {handleSearch}
           selectedUnit = {selectedUnit}
           handleSelectedUnit = {handleSelectedUnit}
+          handleFormSubmit = {handleFormSubmit}
+          newItem = {newItem}
+          setNewItem = {setNewItem}
+          newQty = {newQty}
+          setNewQty = {setNewQty}
         />
         <FooterComponent />
     </div>

@@ -10,7 +10,7 @@ const ItemListRowComponent = ({ itemName, qty, unit }) => {
             <label htmlFor="">{ itemName } -  {qty} {unit} </label>
         </td>
         <td className="text-end">
-            <button type="button" className="btn btn-danger">
+            <button type="button" className="btn btn-danger btn-sm">
                 D
             </button>
         </td>

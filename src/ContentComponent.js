@@ -2,7 +2,7 @@ import React from 'react'
 import CreateItemFormComponent from './CreateItemFormComponent'
 import ItemListComponent from './ItemListComponent'
 
-const ContentComponent = () => {
+const ContentComponent = ({ grocceryList }) => {
   return (
     <div className="content">
         <div className="row w-100 gy-0">
@@ -10,7 +10,9 @@ const ContentComponent = () => {
                 <CreateItemFormComponent />
             </div>
             <div className="col-6 p-0">
-                <ItemListComponent />
+                <ItemListComponent
+                  grocceryList = {grocceryList}
+                />
             </div>
         </div>
     </div>

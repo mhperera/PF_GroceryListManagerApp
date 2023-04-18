@@ -19,9 +19,9 @@ const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheck
 				<div className="col-12 mb-3">
 					<table className="table table-borderless w-100">
 						<colgroup>
-							<col width="100px" />
+							<col width="40px" />
 							<col width="" />
-							<col width="50px" />
+							<col width="40px" />
 						</colgroup>
 						<tbody>
 							{grocceryList.map((item) => (

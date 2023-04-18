@@ -79,6 +79,12 @@ body {
   border-color: #dc3545;
 }
 
+.btn-danger:hover {
+  color: #fff;
+  background-color: #ae2230 !important;
+  border-color: #c62d3c;
+}
+
 .form-check-input[type="checkbox"] {
   border-bottom-width: 1px !important;
   border-radius: 0 !important;

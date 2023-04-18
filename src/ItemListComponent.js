@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemListRowComponent from './ItemListRowComponent';
 
-const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheckbox, grocceryListCount}) => {
+const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheckbox, grocceryListCount, handleDelete}) => {
 	return (
 		<div className="w-100 bg-light-grey vh-100 ItemListComponent">
 			<div className="row">
@@ -29,6 +29,7 @@ const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheck
 									key={item.id}
 									item={item}
 									handleCheckbox = {handleCheckbox}
+									handleDelete ={handleDelete}
 								/>
 							))}
 						</tbody>
@@ -37,7 +38,7 @@ const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheck
 
 				<div className="col-12 mb-3 text-end">
 					<label htmlFor="" className="fw-bolder fs-5">
-						{ grocceryListCount } Items in the List
+						{ grocceryListCount } { grocceryListCount===1 ? 'item': 'items' }  in the List
 					</label>
 				</div>
 			</div>

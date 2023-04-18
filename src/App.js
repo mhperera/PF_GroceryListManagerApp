@@ -87,6 +87,13 @@ function App() {
     setGrocceryList(newGrocceryList);
   }
 
+  const handleDelete = (id) => {
+    console.log(id);
+    const newGrocceryList = grocceryList.filter((item) => item.id !== id);
+    setGrocceryList(newGrocceryList);
+    setGrocceryListCount(newGrocceryList.length);
+  }
+
   return (
     <div className="App">
         <HeaderComponent />
@@ -105,6 +112,7 @@ function App() {
           setNewQty = {setNewQty}
           handleCheckbox = {handleCheckbox}
           grocceryListCount = {grocceryListCount}
+          handleDelete={handleDelete}
         />
         <FooterComponent />
     </div>

@@ -13,31 +13,36 @@ function App() {
       id: 1,
       itemName: 'Milk Powder 300G',
       qty: 3,
-      unit: 'Nos'
+      unit: 'Nos',
+      checked : false
     },
     {
       id: 2,
       itemName: 'Coconut Powder 400G',
       qty: 3,
-      unit: 'Nos'
+      unit: 'Nos',
+      checked : false
     },
     {
       id: 3,
       itemName: 'Chicken 1KG',
       qty: 2,
-      unit: 'Nos'
+      unit: 'Nos',
+      checked : false
     },
     {
       id: 4,
       itemName: 'Potatop 1KG',
       qty: 1,
-      unit: 'Nos'
+      unit: 'Nos',
+      checked : false
     },
     {
       id: 5,
       itemName: 'Sugar 1KG',
       qty: 3,
-      unit: 'Nos'
+      unit: 'Nos',
+      checked : false
     }
   ];
 
@@ -68,9 +73,17 @@ function App() {
       id : grocceryList.length+1,
       itemName : newItem,
       qty: newQty,
-      unit: selectedUnit
+      unit: selectedUnit,
+      checked : false
     }
     const newGrocceryList = [...grocceryList, newGrocceryItem];
+    setGrocceryList(newGrocceryList);
+  }
+
+  const handleCheckbox = (id) => {
+    const newGrocceryList = grocceryList.map((item)=>(
+      (item.id === id) ? { ...item, checked: !item.checked } : item
+    ));
     setGrocceryList(newGrocceryList);
   }
 
@@ -90,6 +103,7 @@ function App() {
           setNewItem = {setNewItem}
           newQty = {newQty}
           setNewQty = {setNewQty}
+          handleCheckbox = {handleCheckbox}
         />
         <FooterComponent />
     </div>

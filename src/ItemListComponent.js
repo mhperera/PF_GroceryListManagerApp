@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemListRowComponent from './ItemListRowComponent';
 
-const ItemListComponent = ({ grocceryList, searchText, handleSearch}) => {
+const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheckbox}) => {
 	return (
 		<div className="w-100 bg-light-grey vh-100 ItemListComponent">
 			<div className="row">
@@ -27,9 +27,8 @@ const ItemListComponent = ({ grocceryList, searchText, handleSearch}) => {
 							{grocceryList.map((item) => (
 								<ItemListRowComponent
 									key={item.id}
-									itemName={item.itemName}
-									qty={item.qty}
-									unit={item.unit}
+									item={item}
+									handleCheckbox = {handleCheckbox}
 								/>
 							))}
 						</tbody>

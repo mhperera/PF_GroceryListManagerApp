@@ -2,7 +2,7 @@ import React from 'react'
 import CreateItemFormComponent from './CreateItemFormComponent'
 import ItemListComponent from './ItemListComponent'
 
-const ContentComponent = ({ grocceryList, searchText, handleSearch, selectedUnit, handleSelectedUnit, handleFormSubmit, newItem, setNewItem, newQty, setNewQty }) => {
+const ContentComponent = ({ grocceryList, searchText, handleSearch, selectedUnit, handleSelectedUnit, handleFormSubmit, newItem, setNewItem, newQty, setNewQty, handleCheckbox }) => {
   return (
     <div className="content">
         <div className="row w-100 gy-0">
@@ -22,6 +22,7 @@ const ContentComponent = ({ grocceryList, searchText, handleSearch, selectedUnit
                   grocceryList = {grocceryList}
                   searchText = {searchText}
                   handleSearch = {handleSearch}
+                  handleCheckbox={handleCheckbox}
                 />
             </div>
         </div>

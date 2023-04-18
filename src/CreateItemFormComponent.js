@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CreateItemFormComponent = () => {
+const CreateItemFormComponent = ({selectedUnit, handleSelectedUnit}) => {
 	return (
 		<div className="w-100 vh-100 CreateItemFormComponent">
 			<form>
@@ -10,7 +10,7 @@ const CreateItemFormComponent = () => {
 					</div>
 
 					<div className="col-12 mb-3">
-						<label forHtml="itemName" className="form-label">
+						<label forhtml="itemName" className="form-label">
 							Item Name <span className="text-danger">*</span>
 						</label>
 						<input
@@ -23,7 +23,7 @@ const CreateItemFormComponent = () => {
 					</div>
 
 					<div className="col-6 mb-3">
-						<label forHtml="quantity" className="form-label">
+						<label forhtml="quantity" className="form-label">
 							Quantity <span className="text-danger">*</span>
 						</label>
 						<input
@@ -36,7 +36,7 @@ const CreateItemFormComponent = () => {
 					</div>
 
 					<div className="col-6 mb-3">
-						<label forHtml="unit" className="form-label">
+						<label forhtml="unit" className="form-label">
 							Unit <span className="text-danger">*</span>
 						</label>
 						<select
@@ -44,10 +44,10 @@ const CreateItemFormComponent = () => {
 							id="unit"
 							className="form-control"
 							required
+							value={selectedUnit}
+							onChange={(e)=>{handleSelectedUnit(e.target.value)}}
 						>
-							<option value="Nos" selected>
-								Nos
-							</option>
+							<option value="Nos">Nos</option>
 							<option value="Boxes">Boxes</option>
 							<option value="Packets">Packets</option>
 							<option value="Bags">Bags</option>

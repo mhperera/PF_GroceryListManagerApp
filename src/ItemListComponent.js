@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemListRowComponent from './ItemListRowComponent';
 
-const ItemListComponent = ({ grocceryList }) => {
+const ItemListComponent = ({ grocceryList, searchText, handleSearch}) => {
 	return (
 		<div className="w-100 bg-light-grey vh-100 ItemListComponent">
 			<div className="row">
@@ -12,10 +12,12 @@ const ItemListComponent = ({ grocceryList }) => {
 						name="searchText"
 						id="searchText"
 						placeholder="Search by Item Name"
+						value={ searchText }
+						onChange={ (e)=>{ handleSearch(e.target.value) } }
 					/>
 				</div>
 				<div className="col-12 mb-3">
-					<table class="table table-borderless w-100">
+					<table className="table table-borderless w-100">
 						<colgroup>
 							<col width="100px" />
 							<col width="" />

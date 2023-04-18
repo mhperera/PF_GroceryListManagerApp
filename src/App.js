@@ -42,12 +42,28 @@ function App() {
   ];
 
   const [grocceryList, setGrocceryList] = useState(sampleList);
+  const [searchText, setSearchText] = useState('');
+  const [selectedUnit, setSelectedUnit] = useState('Nos');
+
+  const handleSearch = (keyWord) => {
+    setSearchText(keyWord);
+  }
+
+  const handleSelectedUnit = (selectedUnit) => {
+    setSelectedUnit(selectedUnit);
+  }
 
   return (
     <div className="App">
         <HeaderComponent />
         <ContentComponent
-          grocceryList = {grocceryList}
+          grocceryList = {grocceryList.filter((item)=>(
+            (item.itemName).toLowerCase().includes(searchText.toLowerCase())
+          ))}
+          searchText = {searchText}
+          handleSearch = {handleSearch}
+          selectedUnit = {selectedUnit}
+          handleSelectedUnit = {handleSelectedUnit}
         />
         <FooterComponent />
     </div>

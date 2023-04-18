@@ -47,6 +47,7 @@ function App() {
   ];
 
   const [grocceryList, setGrocceryList] = useState(sampleList);
+  const [grocceryListCount, setGrocceryListCount] = useState(grocceryList.length);
   const [searchText, setSearchText] = useState('');
   const [selectedUnit, setSelectedUnit] = useState('Nos');
   const [newItem, setNewItem] = useState('');
@@ -78,6 +79,7 @@ function App() {
     }
     const newGrocceryList = [...grocceryList, newGrocceryItem];
     setGrocceryList(newGrocceryList);
+    setGrocceryListCount(newGrocceryList.length);
   }
 
   const handleCheckbox = (id) => {
@@ -104,6 +106,7 @@ function App() {
           newQty = {newQty}
           setNewQty = {setNewQty}
           handleCheckbox = {handleCheckbox}
+          grocceryListCount = {grocceryListCount}
         />
         <FooterComponent />
     </div>

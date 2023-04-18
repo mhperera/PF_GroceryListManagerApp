@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemListRowComponent from './ItemListRowComponent';
 
-const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheckbox}) => {
+const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheckbox, grocceryListCount}) => {
 	return (
 		<div className="w-100 bg-light-grey vh-100 ItemListComponent">
 			<div className="row">
@@ -37,7 +37,7 @@ const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheck
 
 				<div className="col-12 mb-3 text-end">
 					<label htmlFor="" className="fw-bolder fs-5">
-						{ grocceryList.length } Items in the List
+						{ grocceryListCount } Items in the List
 					</label>
 				</div>
 			</div>

@@ -53,3 +53,22 @@ body {
 .row{
   margin: 0 !important;
 }
+
+.heading5{
+  font-weight: bold;
+  color:#156A6A;
+  margin-bottom: 1.25rem;
+}
+
+.form-label{
+  font-weight: bold;
+  margin-bottom: .15rem;
+}
+
+.btn-success{
+  background: #156a6a !important;
+}
+
+.btn-success:hover{
+  background: #105b5b !important;
+}

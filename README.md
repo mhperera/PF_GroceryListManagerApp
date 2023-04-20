@@ -1,3 +1,11 @@
+# <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" title="React" alt="React" width="40" height="40"/>&nbsp;    Introduction for the Groccery List Manager App 
+
+This is Grocery List Manager application built using `React`. The application allows users to `create`, `edit`, and `delete` grocery lists with multiple items. 
+
+The main entry point of the application is src/App.js, which renders the top-level GroceryListManager component that contains the application logic and state. The GroceryListManager component then renders other components, such as GroceryList, GroceryListItem, and AddGroceryItemForm, which handle the display and functionality of the grocery lists and their items.
+
+The application uses React hooks, such as `useState`, `useEffect`, and `useContext`, to manage the state and lifecycle of the components. It also uses the `React.createContext` API to create a context for the application, which allows data to be passed down the component tree without the need for `props drilling`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

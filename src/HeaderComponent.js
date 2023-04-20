@@ -3,7 +3,7 @@ import React from 'react'
 const HeaderComponent = () => {
   return (
     <header className="header">
-        Groccery List Manager
+        Grocery List Manager
     </header>
   )
 }

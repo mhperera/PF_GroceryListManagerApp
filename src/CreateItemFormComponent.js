@@ -60,7 +60,7 @@ const CreateItemFormComponent = ({selectedUnit, handleSelectedUnit, handleFormSu
 
 					<div className="col-6 mb-3">
 						<button type="submit" className="btn btn-success" onClick={()=>{handleFormSubmit()}}>
-							Add to List
+							Add to list
 						</button>
 					</div>
 				</div>

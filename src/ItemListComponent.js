@@ -38,7 +38,7 @@ const ItemListComponent = ({ grocceryList, searchText, handleSearch, handleCheck
 
 				<div className="col-12 mb-3 text-end">
 					<label htmlFor="" className="fw-bolder fs-5">
-						{ grocceryListCount } { grocceryListCount===1 ? 'item': 'items' }  in the List
+						{ grocceryListCount } { grocceryListCount===1 ? 'item': 'items' }  in the list
 					</label>
 				</div>
 			</div>

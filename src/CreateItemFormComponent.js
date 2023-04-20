@@ -6,7 +6,7 @@ const CreateItemFormComponent = ({selectedUnit, handleSelectedUnit, handleFormSu
 			<form onSubmit={(e)=>{e.preventDefault()}}>
 				<div className="row">
 					<div className="col-12">
-						<h5 className="heading5">Add Groccery Item</h5>
+						<h5 className="heading5">Add Grocery Item</h5>
 					</div>
 
 					<div className="col-12 mb-3">

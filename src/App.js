@@ -2,54 +2,20 @@
 import HeaderComponent from './HeaderComponent';
 import FooterComponent from './FooterComponent';
 import ContentComponent from './ContentComponent';
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 
 function App() {
 
-  const sampleList = [
-    {
-      id: 1,
-      itemName: 'Milk Powder 300G',
-      qty: 3,
-      unit: 'Nos',
-      checked : false
-    },
-    {
-      id: 2,
-      itemName: 'Coconut Powder 400G',
-      qty: 3,
-      unit: 'Nos',
-      checked : false
-    },
-    {
-      id: 3,
-      itemName: 'Chicken 1KG',
-      qty: 2,
-      unit: 'Nos',
-      checked : false
-    },
-    {
-      id: 4,
-      itemName: 'Potatop 1KG',
-      qty: 1,
-      unit: 'Nos',
-      checked : false
-    },
-    {
-      id: 5,
-      itemName: 'Sugar 1KG',
-      qty: 3,
-      unit: 'Nos',
-      checked : false
-    }
-  ];
-
-  const [grocceryList, setGrocceryList] = useState(sampleList);
+  const [grocceryList, setGrocceryList] = useState(JSON.parse(localStorage.getItem('shopping-list')) || []);
   const [grocceryListCount, setGrocceryListCount] = useState(grocceryList.length);
   const [searchText, setSearchText] = useState('');
   const [selectedUnit, setSelectedUnit] = useState('Nos');
   const [newItem, setNewItem] = useState('');
   const [newQty, setNewQty] = useState(1);
+
+  useEffect(()=>{
+    localStorage.setItem('shopping-list',JSON.stringify(grocceryList));
+  },[grocceryList]);
 
   const handleSearch = (keyWord) => {
     setSearchText(keyWord);

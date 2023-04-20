@@ -1,4 +1,4 @@
-# <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" title="React" alt="React" width="40" height="40"/>&nbsp;    Introduction for the Groccery List Manager App 
+# <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" title="React" alt="React" width="40" height="40"/>&nbsp;    Introduction for the Grocery List Manager App 
 
 This is Grocery List Manager application built using `React`. The application allows users to `create`, `edit`, and `delete` grocery lists with multiple items. 
 
